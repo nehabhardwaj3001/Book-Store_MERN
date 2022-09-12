@@ -1,11 +1,11 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const router = require("./routes/bookRoutes");
+// const router = ;
 
 const app = express();
 
 // middleware
-app.use("/books", router)   //localhost/5000/books
+app.use(require("./routes/bookRoutes"))   //localhost/5000/books
 
 mongoose
     .connect("mongodb+srv://neha:neha@cluster0.zluivgn.mongodb.net/?retryWrites=true&w=majority")

@@ -1,6 +1,6 @@
 const Book = require("../models/Book");
 
-const getAllBooks = async (req, res, next) => {
+const getAllBooks = async (req, res ) => {
     let books;
     try {
       books = await Book.find();
