@@ -1,4 +1,3 @@
-// const { findByIdAndUpdate, findByIdAndDelete } = require("../models/Book");
 const Book = require("../models/Book");
 
 exports.getAllBooks = async (req, res) => {
@@ -17,7 +16,6 @@ exports.getAllBooks = async (req, res) => {
 
 exports.getById = async(req, res, next) => {
   const id = req.params.id;
-  console.log('+++++++++++++++++++++++', id)
   let book;
   try {
     book = await Book.findById(id);
@@ -47,8 +45,6 @@ exports.addBook = async (req, res) => {
     return res.status(500).json({ message: "Unable to add" });
   }
   return res.status(201).json({ book });
-  // console.log(req.body);
-  // res.send(req.body)
 };
 
 exports.updateBook = async (req, res) => {

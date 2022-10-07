@@ -1,0 +1,59 @@
+ul {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.book {
+    max-width: 250px;
+}
+
+.card {
+    min-width: 244px;
+    height: 100%;
+    box-shadow: 5px 5px 10px #ccc;
+    align-items: center;
+    padding: 15px;
+    justify-content: center;
+}
+
+.card > img {
+    min-width: 244px;
+    height: 250px;
+}
+
+.card article {
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.card h3 {
+    margin: 0;
+    padding: 4px;
+}
+
+.card h2 {
+    color: brown;
+    margin-bottom: 15px;
+}
+
+.card p {
+    margin: 0;
+    padding: 3px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+}
+
+.css-1ptx2yq-MuiInputBase-root-MuiInput-root {
+    margin-bottom: 15px;
+}
+
+.css-1rv3ei8-MuiFormControl-root-MuiTextField-root {
+    margin-top: 0px;
+}
