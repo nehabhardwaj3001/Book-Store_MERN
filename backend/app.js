@@ -11,6 +11,7 @@ app.use(express.json())
 app.use(cors());
 // middleware
 app.use(require("./routes/bookRoutes")); //localhost/5000/books
+app.use(require("./routes/userRoute")); //localhost/5000/books
 
 mongoose
   .connect(

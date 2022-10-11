@@ -12,7 +12,7 @@ const BookDetail = () => {
 
   useEffect(() => {
     const fetchHandler = async () => {
-      return await axios.get(`http://localhost:5000/books/${id}`)
+      return await axios.delete(`http://localhost:5000/books/${id}`)
         .then((res) => res.data)
         .then((data) => setInputs(data.book));
     };
@@ -52,13 +52,16 @@ const BookDetail = () => {
         maxWidth={700}
         alignContent={"center"}
         alignSelf="center"
-        margin = '30px auto'
+        margin = '74px auto'
+        border='1px solid olivedrab'
+        borderRadius='10px'
+        padding='30px'
       >
-        <FormLabel>Name</FormLabel>
+        <FormLabel>Name:-</FormLabel>
         <TextField value={inputs.name} onChange={handleChange} margin="normal"  variant="standard" name="name" />
-        <FormLabel>Author</FormLabel>
+        <FormLabel>Author:-</FormLabel>
         <TextField value={inputs.author} onChange={handleChange} margin="normal"  variant="standard" name="author" />
-        <FormLabel>Description</FormLabel>
+        <FormLabel>Description:-</FormLabel>
         <TextField
           value={inputs.description} onChange={handleChange}
           margin="normal"
@@ -66,9 +69,9 @@ const BookDetail = () => {
           variant="standard"
           name="description"
         />
-        <FormLabel>Price</FormLabel>
+        <FormLabel>Price:-</FormLabel>
         <TextField value={inputs.price} onChange={handleChange} type='number' margin="normal"  variant="standard" name="price" />
-        <FormLabel>Image</FormLabel>
+        <FormLabel>Image:-</FormLabel>
         <TextField value={inputs.image} onChange={handleChange} margin="normal"  variant="standard" name="image" />
         <FormControlLabel control={<Checkbox checked={checked} onChange={() => setChecked(!checked)}/>} label="Available" />
         <Button variant="contained" type='submit' sx={{mt: '20px', height: "50px"}}>Update Book</Button>

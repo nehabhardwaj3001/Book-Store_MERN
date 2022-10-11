@@ -13,8 +13,8 @@ import { NavLink } from "react-router-dom";
 const Header = () => {
   const [value, setValue] = useState(0);
   return (
-    <div sx={{ mb: "100px" }}>
-      <AppBar sx={{ backgroundColor: "#232F3D" }} position="relative">
+    <div sx={{ mb: "100px", position:'fixed' , zIndex: '1000' }}>
+      <AppBar sx={{ backgroundColor: "#232F3D" }}>
         <Toolbar>
           <NavLink to="/" style={{ color: "white" }}>
             <IconButton
@@ -36,8 +36,8 @@ const Header = () => {
             value={value}
             onChange={(e, val) => setValue(val)}
           >
-            <Tab LinkComponent={NavLink} to="/add" label="Add Product" />
             <Tab LinkComponent={NavLink} to="/books" label="Books" />
+            <Tab LinkComponent={NavLink} to="/add" label="Add Product" />
             <Tab LinkComponent={NavLink} to="/about" label="ABOUT Us" />
           </Tabs>
         </Toolbar>
